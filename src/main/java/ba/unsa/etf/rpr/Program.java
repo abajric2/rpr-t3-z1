@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr;
 
 import java.util.Scanner;
+import java.util.Set;
 
 public class Program {
     public static Scanner ulaz = new Scanner(System.in);
@@ -21,6 +22,12 @@ public class Program {
                     break;
                 case "naSlovo":
                     naSlovo();
+                    break;
+                case "izGrada":
+                    izGrada();
+                    break;
+                case "izGradaBrojevi":
+                    izGradaBrojevi();
                     break;
                 case "izlaz":
                     System.exit(0);
@@ -75,5 +82,30 @@ public class Program {
         System.out.println("Unesite slovo na koje zelite pretraziti imena:");
         char s = ulaz.nextLine().toCharArray()[0];
         System.out.println(imenik.naSlovo(s));
+    }
+    private static void izGrada() {
+        System.out.println("Unesite ime grada:");
+        String grad = ulaz.nextLine();
+        try {
+            Grad g = Grad.valueOf(grad);
+            System.out.println(imenik.izGrada(g));
+        }
+        catch(Exception izuzetak) {
+            System.out.println("Pogresan grad");
+        }
+    }
+    private static void izGradaBrojevi() {
+        System.out.println("Unesite ime grada:");
+        String grad = ulaz.nextLine();
+        try {
+            Grad g = Grad.valueOf(grad);
+            Set<TelefonskiBroj> skupBrojeva = imenik.izGradaBrojevi(g);
+            for(TelefonskiBroj br : skupBrojeva) {
+                System.out.println(br.ispisi());
+            }
+        }
+        catch(Exception izuzetak) {
+            System.out.println("Pogresan grad");
+        }
     }
 }
