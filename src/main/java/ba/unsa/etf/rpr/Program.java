@@ -3,6 +3,10 @@ package ba.unsa.etf.rpr;
 import java.util.Scanner;
 import java.util.Set;
 
+/**
+ * Klasa koja koristi metode klase Imenik
+ * Korisnik unosi neku od ponudjenih opcija te se na osnovu toga izvrsavaju odredjene funkcije
+ */
 public class Program {
     public static Scanner ulaz = new Scanner(System.in);
     public static Imenik imenik = new Imenik();

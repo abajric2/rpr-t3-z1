@@ -1,5 +1,8 @@
 package ba.unsa.etf.rpr;
 
+/**
+ * Pobrojani tip za gradove
+ */
 public enum Grad {
     BIHAC("037"),
     GORAZDE("038"),

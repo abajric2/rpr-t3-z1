@@ -2,6 +2,10 @@ package ba.unsa.etf.rpr;
 
 import java.util.Objects;
 
+/**
+ * Klasa koja nasljedjuje klasu TelefonskiBroj
+ * Sadrzi osnovne metode za rad sa medjunarodnim brojevima
+ */
 public class MedunarodniBroj extends TelefonskiBroj {
     private String drzava;
     private String broj;

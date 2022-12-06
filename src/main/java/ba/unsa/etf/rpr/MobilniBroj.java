@@ -2,6 +2,9 @@ package ba.unsa.etf.rpr;
 
 import java.util.Objects;
 
+/**
+ * Klasa za rad sa mobilnim brojevima, naslijedjena iz klase TelefonskiBroj
+ */
 public class MobilniBroj extends TelefonskiBroj {
     private int mobilnaMreza;
     private String broj;
