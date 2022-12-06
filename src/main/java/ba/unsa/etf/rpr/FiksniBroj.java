@@ -6,6 +6,7 @@ public class FiksniBroj extends TelefonskiBroj {
     private Grad grad;
     private String broj;
     public FiksniBroj(Grad grad, String broj) {
+        if(grad == null) throw new TelefonskiBrojIzuzetak("Neispravan pozivni broj");
         this.grad=grad;
         this.broj=broj;
     }
