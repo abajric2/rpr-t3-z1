@@ -35,6 +35,8 @@ public class Program {
                     break;
                 case "izlaz":
                     System.exit(0);
+                default:
+                    System.out.println("Pogresna naredba");
             }
         }
     }
