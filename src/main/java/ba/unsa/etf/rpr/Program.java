@@ -73,13 +73,15 @@ public class Program {
     private static void dajBroj() {
         System.out.println("Unesite ime osobe ciji broj zelite ispisati:");
         String ime = ulaz.nextLine();
-        if(ime != null) System.out.println(imenik.dajBroj(ime));
+        String broj = imenik.dajBroj(ime);
+        if(broj != null) System.out.println(broj);
         else System.out.println("U imeniku ne postoji osoba sa unesenim imenom");
     }
     private static void dajIme() {
         System.out.println("Unesite broj osobe cije ime zelite ispisati:");
         TelefonskiBroj broj = unesiBrojTelefona();
-        if(broj != null) System.out.println(imenik.dajIme(broj));
+        String ime = imenik.dajIme(broj);
+        if(ime != null) System.out.println(ime);
         else System.out.println("U imeniku ne postoji osoba sa unesenim brojem");
     }
     private static void naSlovo() {
