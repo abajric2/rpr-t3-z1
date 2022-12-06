@@ -23,6 +23,14 @@ public class Imenik {
         brojevi.put(ime, broj);
     }
 
+    public Map<String, TelefonskiBroj> getBrojevi() {
+        return brojevi;
+    }
+
+    public void setBrojevi(Map<String, TelefonskiBroj> brojevi) {
+        this.brojevi = brojevi;
+    }
+
     /**
      * Vraca telefonski broj osobe cije ime je dato kao parametar
      * @param ime - ime osobe ciji broj zelimo
